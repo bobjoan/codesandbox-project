@@ -84,6 +84,7 @@ main {
 }
 .current-temperature-degree {
   display: inline-block;
+  font-weight: lighter;
 }
 #icon {
   display: inline-block;
