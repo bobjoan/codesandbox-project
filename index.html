@@ -33,14 +33,19 @@
           <div>
             <h1 class="current-city" id="current-city">Paris</h1>
             <p class="current-details">
-              <span id="current-date"></span>, moderate rain <br />
-              Humidity: <strong>87%</strong>, Wind: <strong>7.2km/h</strong>
+              <span id="current-date"></span>,
+              <span id="current-description"></span>
+              <br />
+              Humidity: <strong id="current-humidity"></strong>, Wind:
+              <strong id="current-speed"></strong>
             </p>
           </div>
-          <div class="current-temperature">
-            <span class="current-temperature-icon">☀️</span
-            ><span class="current-temperature-value">24</span
-            ><span class="current-temperature-unit">°C</span>
+          <div class="current-temperature-details">
+            <div id="icon"></div>
+            <div class="current-temperature-value" id="varying-temperature">
+              24
+            </div>
+            <div class="current-temperature-degree">°C</div>
           </div>
         </div>
       </main>
