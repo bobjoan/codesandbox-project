@@ -52,6 +52,9 @@ main {
 
 .current-temperature-details {
   font-size: 48px;
+  display: inline-block;
+  vertical-align: middle;
+  font-weight: bold;
 }
 
 .current-weather {
@@ -63,6 +66,8 @@ main {
   font-size: 38px;
   font-weight: 900;
   margin: 0;
+  display: inline-block;
+  vertical-align: middle;
 }
 .current-details {
   color: #f9f7fe;
@@ -75,15 +80,15 @@ main {
   color: peru;
 }
 .current-temperature-value {
-  font-size: 80px;
-  font-weight: bold;
-  line-height: 88px;
+  display: inline-block;
 }
-
 .current-temperature-degree {
-  font-size: 28px;
-  text-align: end;
-  margin-top: 6px;
+  display: inline-block;
+}
+#icon {
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 5px;
 }
 
 footer {
