@@ -8,11 +8,7 @@ a {
 }
 
 .weather-app {
-  background: radial-gradient(
-    circle at 10% 20%,
-    rgb(0, 107, 141) 0%,
-    rgb(0, 69, 91) 90%
-  );
+  background-color: plum;
   max-width: 600px;
   margin: 60px auto;
   padding: 30px;
@@ -49,19 +45,17 @@ header {
 main {
   padding: 30px 0;
 }
-
-.current-temperature-details {
-  font-size: 48px;
-  display: inline-block;
-  vertical-align: middle;
-  font-weight: bold;
-}
-
 .current-weather {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
-
+.current-temperature-details {
+  font-size: 48px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+}
 .current-city {
   font-size: 38px;
   font-weight: 900;
@@ -71,27 +65,35 @@ main {
 }
 .current-details {
   color: #f9f7fe;
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 400;
+  text-align: left;
   line-height: 24px;
 }
-
-.current-details strong {
-  color: peru;
-}
 .current-temperature-value {
-  display: inline-block;
-}
-.current-temperature-degree {
-  display: inline-block;
-  font-weight: lighter;
-}
-#icon {
   display: inline-block;
   vertical-align: middle;
   margin-right: 5px;
 }
-
+.current-details strong {
+  color: peru;
+}
+.current-temperature-degree {
+  font-weight: lighter;
+  font-size: 30px;
+}
+#icon {
+  margin-right: 5px;
+}
+.weather-forecast {
+  display: inline;
+  margin-top: 30px;
+}
+.forecast-temperatures {
+  text-align: center;
+  margin-top: 10px;
+  display: flex;
+}
 footer {
   border-top: 1px solid #f9f7fe;
   text-align: center;

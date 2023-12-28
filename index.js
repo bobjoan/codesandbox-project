@@ -61,3 +61,30 @@ function showWeather(response) {
   temperatureElement.innerHTML = Math.round(temperature);
   iconElement.innerHTML = `<img src="${response.data.condition.icon_url}" class="weather-app-icon" />`;
 }
+
+function displayForecast() {
+  let days = ["Tue", "Wed", "Thur", "Fri", "Sat"];
+  let forecastHtml = "";
+
+  days.forEach(function (day) {
+    forecast.innerHTML =
+      forecastHtml +
+      `
+    
+    <div class="week-container">
+    <div class="forecast-day">${day}</div>
+    <div class="weather-icon">🌤️</div>
+    <div class="forecast-temperatures">
+    <div class="forecast-temperature"><strong>30&deg</strong></div>
+    <div class="forecast-temperature">20&deg</div>
+    </div>
+    </div>
+    `;
+  });
+
+  let forecastElement = document.querySelector("#foresast");
+  forecastElement.innerHTML = forecastHtml;
+}
+displayForecast();
+showWeather();
+formatDate();
