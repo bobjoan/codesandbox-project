@@ -60,31 +60,39 @@ function showWeather(response) {
   windSpeedElement.innerHTML = `${response.data.wind.speed}km/h`;
   temperatureElement.innerHTML = Math.round(temperature);
   iconElement.innerHTML = `<img src="${response.data.condition.icon_url}" class="weather-app-icon" />`;
+  getForecast(response.data.city);
 }
 
-function displayForecast() {
+function getForecast(city) {
+  let apiKey = "b30b76f38a21608034fc384fba6ot0fc";
+  let apiUrl = `https://api.shecodes.io/weather/v1/forecast?query={query}&key={key}&units=metric`;
+  console.log(apiUrl);
+  axios(apiUrl).then(displayForecast);
+}
+
+function displayForecast(response) {
+  console.log(response.data);
+
   let days = ["Tue", "Wed", "Thur", "Fri", "Sat"];
   let forecastHtml = "";
 
   days.forEach(function (day) {
-    forecast.innerHTML =
+    forecastHtml =
       forecastHtml +
       `
-    
-    <div class="week-container">
-    <div class="forecast-day">${day}</div>
-    <div class="weather-icon">🌤️</div>
-    <div class="forecast-temperatures">
-    <div class="forecast-temperature"><strong>30&deg</strong></div>
-    <div class="forecast-temperature">20&deg</div>
-    </div>
-    </div>
-    `;
+        <div class="week-container">
+          <div class="forecast-day">${day}</div>
+          <div class="weather-icon">🌤️</div>
+          <div class="forecast-temperatures">
+            <div class="forecast-temperature">
+              <strong>30&deg</strong>
+            </div>
+            <div class="forecast-temperature">20&deg</div>
+          </div>
+        </div>
+      `;
   });
 
-  let forecastElement = document.querySelector("#foresast");
+  let forecastElement = document.querySelector("#forecast-days");
   forecastElement.innerHTML = forecastHtml;
 }
-displayForecast();
-showWeather();
-formatDate();
