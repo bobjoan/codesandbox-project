@@ -74,6 +74,7 @@ main {
   display: inline-block;
   vertical-align: middle;
   margin-right: 5px;
+  font-size: 88px;
 }
 .current-details strong {
   color: peru;
